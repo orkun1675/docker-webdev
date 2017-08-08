@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y \
   tcpdump \
   iptables \
   kmod \
+  tmux \
+  screen \
   && rm -rf /var/lib/apt/lists/* \
   && sed -e '/$KLogPermitNonKernelFacility/ s/^#*/# /' -i /etc/rsyslog.conf \
   && service rsyslog restart
