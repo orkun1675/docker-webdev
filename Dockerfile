@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
   tmux \
   screen \
   netcat \
+  dnsutils \
   && rm -rf /var/lib/apt/lists/* \
   && sed -e '/$KLogPermitNonKernelFacility/ s/^#*/# /' -i /etc/rsyslog.conf \
   && service rsyslog restart
